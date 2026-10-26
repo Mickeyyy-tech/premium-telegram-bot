@@ -1,4 +1,5 @@
 import os
+import asyncio
 import logging
 from telegram import (
     Update,
@@ -260,6 +261,6 @@ def main():
     print("Bot is running...")
     app.run_polling()
 
-
 if __name__ == "__main__":
+    asyncio.set_event_loop(asyncio.new_event_loop())
     main()
