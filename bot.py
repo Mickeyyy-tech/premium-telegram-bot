@@ -131,11 +131,9 @@ async def package_selected(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"💰 Price: ₹{price}\n"
         f"Displayed balance: {balance:,}\n\n"
         "1. QR par payment karein.\n"
-        "2. Payment account mein transaction successful hone ke baad "
-        "SUBMIT UTR dabayein.\n"
-        "3. Admin payment manually verify karega.\n\n"
-        "⚠️ UTR dene se payment automatically verify nahi hoti."
-    )
+    "2. Payment account mein transaction successful hone ke baad "
+    "SUBMIT UTR dabayein.\n"
+)
     if os.path.isfile(QR_FILE):
         with open(QR_FILE, "rb") as photo:
             await query.message.reply_photo(
